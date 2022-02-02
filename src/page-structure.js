@@ -7,7 +7,7 @@ const buildTeam = team => {
         <div class="card team-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getEmployeeName()}</h2>
-            <h3 class="card-title"><i class="fas fa-black-tie mr-2"></i>${manager.getRole()}</h3>
+            <h3 class="card-title"><i class="fas fa-black-tie mr-2"></i>${manager.getEmployeeRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -26,7 +26,7 @@ const buildTeam = team => {
         <div class="card team-card">
     <div class="card-header">
         <h2 class="card-title">${engineer.getEmployeeName()}</h2>
-        <h3 class="card-title"><i class="fas fa-brain mr-2"></i>${engineer.getRole()}</h3>
+        <h3 class="card-title"><i class="fas fa-brain mr-2"></i>${engineer.getEmployeeRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -45,7 +45,7 @@ const buildTeam = team => {
         <div class="card team-card">
     <div class="card-header">
         <h2 class="card-title">${intern.getEmployeeName()}</h2>
-        <h3 class="card-title"><i class="fas fa-book mr-2"></i>${intern.getRole()}</h3>
+        <h3 class="card-title"><i class="fas fa-book mr-2"></i>${intern.getEmployeeRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -61,16 +61,16 @@ const buildTeam = team => {
     const html = [];
 
     html.push(team
-        .filter(employee => employee.getRole() === "Manager")
+        .filter(employee => employee.getEmployeeRole() === "Manager")
         .map(manager => buildManager(manager))
     );
     html.push(team
-        .filter(employee => employee.getRole() === "Engineer")
+        .filter(employee => employee.getEmployeeRole() === "Engineer")
         .map(engineer => buildEngineer(engineer))
         .join("")
     );
     html.push(team
-        .filter(employee => employee.getRole() === "Intern")
+        .filter(employee => employee.getEmployeeRole() === "Intern")
         .map(intern => buildIntern(intern))
         .join("")
     );
@@ -105,14 +105,14 @@ module.exports = team => {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
+            <div class="col-12 jumbotron mb-3 team-header">
                 <h1 class="text-center">Meet the Team!</h1>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-space col-12 d-flex justify-content-center">
                 ${buildTeam(team)}
             </div>
         </div>
