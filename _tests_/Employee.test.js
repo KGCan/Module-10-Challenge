@@ -40,7 +40,7 @@ test("gets employee e-mail via constructor", () => {
   
   test("get E-mail", () => {
     const testData = "Steve@test.com";
-    const employee = new Employee("STeve", 95, testData);
+    const employee = new Employee("Steve", 95, testData);
     expect(employee.getEmployeeEmail()).toEqual(testData);
   });
   
