@@ -7,7 +7,7 @@ const buildTeam = team => {
         <div class="card team-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getEmployeeName()}</h2>
-            <h3 class="card-title"><i class="fas fa-black-tie mr-2"></i>${manager.getEmployeeRole()}</h3>
+            <h3 class="card-title"><i class="fa fa-black-tie mr-2"></i>${manager.getEmployeeRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
