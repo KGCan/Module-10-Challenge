@@ -151,7 +151,7 @@ function mainMenu () {
             message: "The email you entered is invalid, please try again",
             validate: userInput => {
               const valid = userInput.match(
-                /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+                /\S+@\S+\.\S+/
               );
               if (valid) {
                 return true;
@@ -216,7 +216,7 @@ function mainMenu () {
             message: "Please enter the intern's email",
             validate: userInput => {
               const valid = userInput.match(
-                /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+                /\S+@\S+\.\S+/
               );
               if (valid) {
                 return true;
