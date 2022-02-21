@@ -4,7 +4,7 @@ const Employee = require("../lib/Employee");
 test ("Set office number via argument", () => {
     const testData = 847
     const manager = new Manager("Casey", 88, "Casey@test.com", testData);
-    expect(manager.officeNumber).toEqual(testData);
+    expect(manager.officeNumber()).toEqual(testData);
 });
 
 test("getEmployeeRole () returns Manager", () => {

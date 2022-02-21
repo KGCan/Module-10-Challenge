@@ -3,7 +3,7 @@ const Intern = require("../lib/Intern");
 test("set school via constructor", () => {
     const testData = "CSUS";
     const intern = new Intern("Chris", 22, "chris@test.com", testData);
-    expect(intern.internSchool).toEqual(testData);
+    expect(intern.internSchool()).toEqual(testData);
 });
 
 test("getEmployeeRole returns intern", () => {

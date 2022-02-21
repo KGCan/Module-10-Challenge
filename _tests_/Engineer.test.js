@@ -4,7 +4,7 @@ const Engineer = require("../lib/Engineer");
 test("GitHub via constructor", () => {
   const testData = "GitHub";
   const engineer = new Engineer("Tom", 46, "tom@test.com", testData);
-  expect(engineer.engineerGitHub).toEqual(testData);
+  expect(engineer.engineerGitHub()).toEqual(testData);
 });
 
 // Test using role

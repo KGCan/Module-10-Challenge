@@ -10,19 +10,19 @@ test("creates employee object via constructor", () => {
 test("sets employee name via constructor", () => {
     const name = "Casey";
     const employee = new Employee(name);
-    expect(employee.employeeName).toEqual(name);
+    expect(employee.employeeName()).toEqual(name);
   });
   
 test("gets employee ID via constructor", () => {
     const testData = 88;
     const employee = new Employee("Joe", testData);
-    expect(employee.employeeID).toEqual(testData);
+    expect(employee.employeeID()).toEqual(testData);
   });
 
 test("gets employee e-mail via constructor", () => {
     const testData = "Steve@test.com";
     const employee = new Employee("Steve", 95, testData);
-    expect(employee.employeeEmail).toEqual(testData);
+    expect(employee.employeeEmail()).toEqual(testData);
   });
 
 // Tests via get(name/id/email etc)

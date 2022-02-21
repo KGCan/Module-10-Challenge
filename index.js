@@ -148,7 +148,7 @@ function mainMenu () {
           {
             type: "input",
             name: "engineerEmail",
-            message: "The email you entered is invalid, please try again",
+            message: "Please enter your engineer's email",
             validate: userInput => {
               const valid = userInput.match(
                 /\S+@\S+\.\S+/
