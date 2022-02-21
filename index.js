@@ -1,5 +1,5 @@
 //Link to page structure
-const pageStructure = require ("./src/page-structure")
+const pageStructure = require ("./src/page-structure.js")
 
 //Team files
 const Manager = require ("./lib/Manager");
