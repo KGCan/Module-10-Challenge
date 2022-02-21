@@ -5,9 +5,9 @@ const buildTeam = team => {
     const buildManager = manager => {
         return `
         <div class="card team-card">
-        <div class="card-header">
+        <div class="card-header bg-success">
             <h2 class="card-title">${manager.getEmployeeName()}</h2>
-            <h3 class="card-title"><i class="fa fa-black-tie mr-2"></i>${manager.getEmployeeRole()}</h3>
+            <h3 class="card-title"><i class="fa fa-user-tie mr-2"></i>${manager.getEmployeeRole()}</h3>
         </div>
         <div class="card-body">
             <ul class="list-group">
@@ -24,7 +24,7 @@ const buildTeam = team => {
     const buildEngineer = engineer => {
         return `
         <div class="card team-card">
-    <div class="card-header">
+    <div class="card-header bg-warning">
         <h2 class="card-title">${engineer.getEmployeeName()}</h2>
         <h3 class="card-title"><i class="fas fa-brain mr-2"></i>${engineer.getEmployeeRole()}</h3>
     </div>
@@ -43,7 +43,7 @@ const buildTeam = team => {
     const buildIntern = intern => {
         return `
         <div class="card team-card">
-    <div class="card-header">
+    <div class="card-header bg-primary">
         <h2 class="card-title">${intern.getEmployeeName()}</h2>
         <h3 class="card-title"><i class="fas fa-book mr-2"></i>${intern.getEmployeeRole()}</h3>
     </div>
@@ -105,7 +105,7 @@ module.exports = team => {
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-header">
+            <div class="col-12 jumbotron bg-danger mb-3 team-header">
                 <h1 class="text-center">Meet the Team!</h1>
             </div>
         </div>
