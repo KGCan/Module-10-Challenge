@@ -12,8 +12,8 @@ const fs = require ("fs");
 const path = require ("path");
 
 // Create Directory
-const dataDirectory = path.resolve(__dirname, "newteam");
-const dataPath = path.join(dataDirectory, "team.html");
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 // Team array
 const teamList = [];
@@ -244,10 +244,10 @@ function mainMenu () {
       }
     
       function newTeam() {
-        if (!fs.existsSync(dataDirectory)) {
-          fs.mkdirSync(dataDirectory)
+        if (!fs.existsSync(OUTPUT_DIR)) {
+          fs.mkdirSync(OUTPUT_DIR)
         }
-        fs.writeFileSync(dataPath, pageStructure(teamList), "utf-8");
+        fs.writeFileSync(outputPath, pageStructure(teamList), "utf-8");
       }
     
       newManager();
